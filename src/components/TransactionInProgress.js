@@ -51,18 +51,19 @@ function TransactionInProgress(props) {
 			.catch((err) => {
 				console.log(err);
 			});
-	}, 5000);
-
-	// useEffect(() => {
-	// 	history.push("transactionInProgress");
-	// }, [scanned]);
-
-	console.log(props.location.state.cardId);
-	const url = "http://facebook.github.io/react" + props.location.search;
+	}, 500);
 
 	return (
-		<div style={{ fontSize: 30 }}>
-			<strong>Please complete transaction in Mobile Screen</strong>
+		<div>
+			<div style={{ fontSize: 30, color: "white" }}>
+				<strong>Please complete transaction in Mobile Screen</strong>
+			</div>
+			<div>
+				<img
+					src={process.env.PUBLIC_URL + "/transaction4.png"}
+					style={{ width: "50vw", height: "50vh" }}
+				/>
+			</div>
 		</div>
 	);
 }

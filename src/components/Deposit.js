@@ -37,27 +37,35 @@ function Deposit(props) {
 	return (
 		<>
 			{!deposited && (
-				<div style={{ fontSize: 30 }}>
-					<strong>Please deposit money in ATM</strong>
+				<div>
+					<div style={{ fontSize: 30, color: "white" }}>
+						<strong>Please deposit money in ATM</strong>
+					</div>
+					<div>
+						<img
+							src={process.env.PUBLIC_URL + "/deposit2.png"}
+							style={{ width: "40vw", height: "40vh" }}
+						/>
+					</div>
+					<div style={{ textAlign: "center" }}>
+						{!deposited && (
+							<button
+								id="new-quote"
+								className="btn btn-primary"
+								onClick={() => setDeposited(!deposited)}
+							>
+								Cash Deposited
+							</button>
+						)}
+					</div>
 				</div>
 			)}
 			{deposited && (
-				<div style={{ fontSize: 30 }}>
+				<div style={{ fontSize: 30, color: "white" }}>
 					{" "}
 					<strong>Deposited Successfully</strong>
 				</div>
 			)}
-			<div>
-				{!deposited && (
-					<button
-						id="new-quote"
-						className="btn btn-primary"
-						onClick={() => setDeposited(!deposited)}
-					>
-						Cash Deposited
-					</button>
-				)}
-			</div>
 		</>
 	);
 }

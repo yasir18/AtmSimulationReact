@@ -25,7 +25,7 @@ function QrCodeGeneration(props) {
 			.catch((err) => {
 				console.log(err);
 			});
-	}, 1000);
+	}, 500);
 
 	// useEffect(() => {
 	// 	history.push("transactionInProgress");
@@ -35,14 +35,42 @@ function QrCodeGeneration(props) {
 	const url = "http://facebook.github.io/react" + props.location.search;
 
 	return (
-		<>
-			<QRCode
-				value={cardId}
-				renderAs="svg"
-				size="250"
-				// includeMargin="true"
-			/>
-		</>
+		<div
+			style={{
+				width: "80vw",
+				height: "80vh",
+				display: "flex",
+				justifyContent: "space-around",
+				alignItems: "center",
+			}}
+		>
+			<div>
+				<div
+					style={{ fontSize: 30, color: "white", marginBottom: "30" }}
+				>
+					<strong>Scan QR Code </strong>
+				</div>
+				<div>
+					<QRCode
+						value={cardId}
+						renderAs="svg"
+						size="250"
+						includeMargin="true"
+					/>
+				</div>
+			</div>
+			<div style={{ fontSize: 30, color: "white" }}>
+				<strong>Proceed with Normal Flow </strong>
+				<div style={{ textAlign: "center" }}>
+					<button
+						className="btn btn-primary"
+						style={{ marginRight: "20" }}
+					>
+						Touch based Flow
+					</button>
+				</div>
+			</div>
+		</div>
 	);
 }
 

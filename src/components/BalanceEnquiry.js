@@ -13,8 +13,8 @@ function BalanceEnquiry(props) {
 	}, []);
 	const balance = props.location.state.balance;
 	return (
-		<div style={{ fontSize: 30 }}>
-			<strong>BalanceEnquiry is {balance}</strong>
+		<div style={{ fontSize: 30, color: "white" }}>
+			<strong>Your Current Balance is {balance}</strong>
 		</div>
 	);
 }

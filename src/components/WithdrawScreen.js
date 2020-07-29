@@ -23,21 +23,32 @@ function WithdrawScreen(props) {
 	return (
 		<>
 			{!wihdrawClicked && (
-				<div style={{ fontSize: 30 }}>
-					<strong>Please collect your cash</strong>
+				<div>
+					<div style={{ fontSize: 30, color: "white" }}>
+						<strong>Please collect your cash</strong>
+					</div>
+					<div>
+						<img
+							src={process.env.PUBLIC_URL + "/withdraw3.png"}
+							style={{ width: "40vw", height: "40vh" }}
+						/>
+					</div>
+					<div style={{ textAlign: "center", marginTop: "20" }}>
+						{!wihdrawClicked && (
+							<button
+								id="new-quote"
+								className="btn btn-primary"
+								onClick={() =>
+									setWithdrawClicked(!wihdrawClicked)
+								}
+							>
+								Collect Cash
+							</button>
+						)}
+					</div>
 				</div>
 			)}
-			<div>
-				{!wihdrawClicked && (
-					<button
-						id="new-quote"
-						className="btn btn-primary"
-						onClick={() => setWithdrawClicked(!wihdrawClicked)}
-					>
-						Collect Cash
-					</button>
-				)}
-			</div>
+
 			{wihdrawClicked && (
 				<div style={{ fontSize: 30 }}>
 					<strong>Thank You</strong>

@@ -28,6 +28,22 @@ body,
 		#074323,
 		#07411f
 	);
+	/* background-image: linear-gradient(
+		to right bottom,
+		#93d8c0,
+		#8bd3ba,
+		#82ceb4,
+		#7acaae,
+		#71c5a8,
+		#6ac0a2,
+		#62ba9c,
+		#5bb596,
+		#54ad8e,
+		#4da686,
+		#459e7f,
+		#3e9777
+	); */
+	/* background-image: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"); */
 }
 
 #root {

@@ -11,7 +11,36 @@ const Home = () => {
 	};
 
 	return (
-		<div id="quote-box" style={{ width: "30rem" }}>
+		<div
+			id="quote-box"
+			style={{
+				width: "80vw",
+				height: "80vh",
+				display: "flex",
+				justifyContent: "space-around",
+				alignItems: "center",
+			}}
+		>
+			{/* <div>
+				<img src={process.env.PUBLIC_URL + "/cardswipe3.png"} />
+			</div> */}
+			<div
+				style={{
+					fontSize: 30,
+					color: "white",
+					height: "100%",
+					display: "flex",
+					flexDirection: "column",
+					justifyContent: "space-evenly",
+				}}
+			>
+				<div>
+					<img src={process.env.PUBLIC_URL + "/cardswipe3.png"} />
+				</div>
+				<div style={{ marginTop: "20" }}>
+					<strong>Please swipe ATM card</strong>
+				</div>
+			</div>
 			<div class="card">
 				<div
 					class="card-header"
@@ -22,17 +51,24 @@ const Home = () => {
 					Please Enter Card Number
 				</div>
 				<div class="card-body">
-					<blockquote class="blockquote mb-0">
-						<input
-							type="number"
-							placeholder=" card Number"
-							onChange={(e) => setCardId(e.target.value)}
-							value={cardId}
-						/>
-					</blockquote>
+					<input
+						type="number"
+						placeholder=" card Number"
+						onChange={(e) => setCardId(e.target.value)}
+						value={cardId}
+						style={{ marginRight: "20" }}
+					/>
+					<button
+						className="btn btn-primary"
+						style={{ marginRight: "20" }}
+						onClick={() => gotoQrCodeGenerationScreen()}
+					>
+						Enter
+					</button>
 				</div>
 			</div>
-			<div className="container" style={{ margin: "1em " }}>
+
+			{/* <div className="container" style={{ margin: "1em " }}>
 				<button
 					id="new-quote"
 					className="btn btn-primary"
@@ -40,7 +76,8 @@ const Home = () => {
 				>
 					Generate Qr
 				</button>
-			</div>
+			</div> */}
+			<div></div>
 		</div>
 	);
 };
